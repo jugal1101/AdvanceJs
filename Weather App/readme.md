@@ -51,8 +51,8 @@ Data is displayed using DOM manipulation
 ⚙️ Setup & Run Locally
 
 Clone the repository
-
-git clone https://github.com/jugal1101/weather-app.git
+[
+git clone https://github.com/jugal1101/weather-app.git](https://github.com/jugal1101/AdvanceJs/edit/main/Weather%20App/readme.md)
 
 
 Open the folder
