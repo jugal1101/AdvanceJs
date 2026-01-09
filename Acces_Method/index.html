@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="" name="myform">
+      username: <input type="text" id="user" /> <br />
+      <br />
+      submit: <input type="submit" id="submit" /> <br />
+    </form>
+
+    <script>
+
+let arr = ["javascript","sixmonths","success"]
+
+
+// let a = [1,2,3,4,5]
+// function show([value1, value2, ...rest]){
+//   console.log(value1);
+//   console.log(value2);
+//   console.log(rest);
+// }
+// show(a)
+      // let arr = [
+      //   {
+      //     price: "100",
+      //     product: "mobile",
+      //   },      {
+      //     price: "500",
+      //     product: "pc",
+      //   },      {
+      //     price: "50",
+      //     product: "mic",
+      //   },      {
+      //     price: "700",
+      //     product: "laptop",
+      //   },
+      // ];
+
+      // arr.map(function (value) {
+      //   console.log(value.product);
+      // });
+      // console.log(arr);
+
+      // if(navigator.cookieEnabled){
+      //   document.writeln("cookie enable")
+      // }else{
+      //   document.writeln("cookie disable")
+      // }
+
+      // try {
+      //   add()
+      //   document.writeln("skip code")
+      // }catch(e){
+      //   document.writeln("message:" + e.message + "<br>)");
+      //   document.writeln("name:" + e.name + "<br>)");
+      //   document.writeln("stack:" + e.stack + "<br>)");
+      // }
+
+      //  let form = document.getElementById("myform");
+      //  let inputuser = document.getElementById("user")
+      //  let submit = document.getElementById("submit");
+
+      // sessionStorage.setItem("username","jugalrana")
+      // sessionStorage.setItem("password","jugalrana1234")
+
+      // sessionStorage.removeItem("username")
+
+      // function clear(){
+      //   document.getElementById("para");
+      // }
+      // clearInterval(clear,2000)
+
+      // function inerval(){
+      //   document.getElementById("para").textContent += "hello:";
+      // }
+      // setInterval(inerval,2000)
+
+      // ## setTimeOut
+      // setTimeout(function timer(){
+      //    document.getElementById("para").style = 'background-color:red';
+      // },5000)
+      // function timer(){
+      //   document.getElementById("para").style = 'background-color:red';
+      // }
+      //  setTimeout(timer,5000)
+
+      //  function button (){
+      //   alert("button clicked")
+      //  }
+
+      //  let btn = document.getElementById("btn");
+      //   btn.addEventListener('contextmenu', button)
+
+      // let select = document.querySelectorAll("p");
+      //   console.log(select.length)
+      // let next = document.getElementById("box");
+
+      // next.textContent = "<em> hello everyone</em>"; // it can change or update a text , it ignore html tags
+      // next.innerHTML = "<em> hello everyone</em>"; // it cannot ignore html tags
+
+      //  let btn = document.getElementById("btn");
+      //  let box = document.getElementById("box")
+
+      //  btn.addEventListener('click',()=>{
+      //   box.classList.add("active")
+      //  })
+
+      // ## concept of innertext:
+      // let doc = document.getElementById("hello");
+      // console.log(doc.innerText)
+
+      // ## Documents Fragments
+      // let head = document.getElementById("head")
+      // let df = document.createDocumentFragment(); // document fragment can store multipule value
+      // let pNode = document.createElement("p");
+      // let hNode = document.createElement("h1");
+      // pNode.textContent = "hello Developers:";
+      // hNode.textContent = "hello how are you:";
+      // document.writeln(pNode, hNode);
+      // console.log(pNode, hNode);
+      // df.append(pNode);
+      // df.append(hNode);
+      // head.append(df);
+      // console.log(head)
+
+      // ## Create comments with using JS and append it:
+      // let doc = document.getElementById("head");
+      // let com = document.createComment("This is a h1 comments:");
+      //  com.textContent = "This is a h1 comments:";
+      // console.log(com);
+      // doc.append(com.nodeValue);
+
+      // ## Create text nodes and append in elemnts:
+      // let create = document.getElementById("head");
+      // let next = document.createTextNode("Create Text from JS:");
+      // document.writeln(next)
+      // console.log(next.nodeValue)
+      // create.appendChild(next)
+
+      // ## Create Elements and append to specifice elements:
+      // let app = document.getElementById("head");
+      // let news = document.createElement("h3");
+      // news.textContent = "createElement by JS:";
+      // console.log(news)
+      // app.append(news)
+
+      // ##create Text nodes by Js:
+      // let next = document.createTextNode("hello from JS!");
+      // document.writeln(next)
+      // console.log(next)
+
+      // ## Create Elements by js.
+      //  let task = document.createElement("h1");
+      //  console.log(task)
+
+      // ## Get the child , Sibling , Privious sibling, Next Sibling, Parents
+      // let head = document.getElementById("head");
+      // console.log(head.nextSibling);
+
+      // ## check Attributes with Name and Value:
+      //  let attr = document.getElementById("hello");
+      //   console.log(attr.attributes[0].nodeName);
+      //   console.log(attr.attributes[0].nodeValue);
+      //   console.log(attr.attributes[1].nodeName);
+      //   console.log(attr.attributes[1].nodeValue);
+
+      // ## Get Elements by Query Selectors:
+      //  let first = document.querySelector("p , h1");
+      //  console.log(first)
+
+      // ## Get Elements By ClassName:
+      //   let show = document.getElementById("divi");
+      //   let data = document.getElementsByClassName("rep");
+      //   console.log(show);
+      //   document.writeln(show);
+
+      // ## Get Elements by Id:
+      //  let result = document.getElementById("para");
+      //  console.log(result);
+      //  document.writeln(result);
+
+      // ## Get Elements and check thier Length:
+      //   let tag = document.getElementsByTagName("p").length
+      //   console.log(tag);
+
+      // ## Get Elemets by tagNames:
+      // let repeat = document.getElementsByTagName("p").length
+      // for(let i = 0; i < repeat; i++){
+      //     let len = document.getElementsByTagName("p")[i]
+      //     console.log(len + "<br>");
+      //     document.writeln(len + "<br>");
+
+      // }
+    </script>
+  </body>
+</html>
