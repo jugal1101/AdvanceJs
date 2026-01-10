@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    padding: 40px 70px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    color: #fff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    to {
+        box-shadow: 0 0 60px rgba(0, 255, 255, 0.9);
+    }
+}
+
+.clock-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.clock {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 20px 50px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.357), 0 0 40px rgba(0, 255, 255, 0.419);
+}
+
+.date {
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
