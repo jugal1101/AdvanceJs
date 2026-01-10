@@ -1,42 +1,47 @@
 import countryList from "./data.js";
-let dropwdown = document.querySelectorAll(".dropdown select");
 
-Object.keys(countryList).map((url) =>
-  [...dropwdown].map((select) => {
-    const option = document.createElement("option");
-    option.innerText = url;
-    option.value = url;
+const fromCurrency = document.getElementById("fromCurrency");
+const toCurrency = document.getElementById("toCurrency");
+const form = document.getElementById("form");
+const amountInput = document.getElementById("amount");
+const msg = document.getElementById("msg");
 
-    if (select.name === "from" && url === "USD") {
-      option.selected = true;
-    } else if (select.name === "to" && url === "INR") {
-      option.selected = true;
-    }
-    select.append(option);
-  })
-);
+// Populate dropdowns
+Object.keys(countryList).forEach((currency) => {
+  let option1 = document.createElement("option");
+  option1.value = currency;
+  option1.innerText = currency;
+  fromCurrency.append(option1);
 
-let btn = document.getElementById("btn")
+  let option2 = document.createElement("option");
+  option2.value = currency;
+  option2.innerText = currency;
+  toCurrency.append(option2);
+});
 
-btn.addEventListener('click',(e)=>{
-  e.preventDefault()
-  let amount = document.querySelector(".amount input")
-  let value = amount.value
-if(value === "" || value<1){
- value = 1
- amount.value = "1"
+// Default values
+fromCurrency.value = "USD";
+toCurrency.value = "INR";
+
+// Fetch Exchange Rate
+async function getExchangeRate() {
+  let amount = amountInput.value || 1;
+
+  const url = `https://api.exchangerate-api.com/v4/latest/${fromCurrency.value}`;
+  const response = await fetch(url);
+  const data = await response.json();
+
+  const rate = data.rates[toCurrency.value];
+  const finalAmount = (amount * rate).toFixed(2);
+
+  msg.innerText = `${amount} ${fromCurrency.value} = ${finalAmount} ${toCurrency.value}`;
 }
-  })
 
-//   function currency(){
-//  fetch(url).then((res)=>{
-//     return res.json()
-//    }).then(()=>{
-//    let news = document.createElement("option")
-//     //  console.log(countryList)
-//      dropwdown.innerHTML = news
-//      dropwdown.append(news)
-//    })
+// Button click
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  getExchangeRate();
+});
 
-//   }
-// currency(countryList)
+// Initial load
+getExchangeRate();

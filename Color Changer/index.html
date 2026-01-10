@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #color1{
-            height: 200px;
-            width: 200px;
-            border: 2px solid black;
-            border-radius: 30px;
-            background-color: rgb(250, 86, 77);
-        }
-    
-        #color2{
-            height: 200px;
-            width: 200px;
-            border-radius: 30px;
-                 border: 2px solid black;
-            background-color: rgb(64, 79, 243);
-        }
-    
-        #color3{
-            height: 200px;
-            width: 200px;
-            border-radius: 30px;
-                 border: 2px solid black;
-            background-color: rgb(102, 244, 221);
-        }
-    
-        #color4{
-            height: 200px;
-            width: 200px;
-            border-radius: 30px;
-                 border: 2px solid black;
-            background-color: rgb(255, 0, 81);
-        }
-      .main{
-        display: flex;
-        justify-content: space-between;
-      }
+  <meta charset="UTF-8" />
+  <title>Color Picker App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body id="body">
-    <div class="main"> 
-<div class="color" id="color1"></div>
-<div class="color" id="color2"></div>
-<div class="color" id="color3"></div>
-<div class="color" id="color4"></div>
-</div>
-    <script src="main.js"></script>
+
+  <div class="container">
+    <h1>🎨 Color Picker</h1>
+    <p>Click on any color box to change background</p>
+
+    <div class="main">
+      <div class="color" id="color1"></div>
+      <div class="color" id="color2"></div>
+      <div class="color" id="color3"></div>
+      <div class="color" id="color4"></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
